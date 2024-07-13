@@ -22,6 +22,8 @@ export default function CreateNewWallet() {
   const walletKeypairKey = process.env.NEXT_PUBLIC_LOCAL_STORAGE_KEY as
     | string
     | "cygnus-wallet-keypair";
+  const sessionStoragePasswordKey =
+    process.env.NEXT_PUBLIC_SESSION_STORAGE_KEY || "cygnus-wallet-password";
   const sessionStorageEncryptionKey =
     process.env.NEXT_PUBLIC_SESSION_STORAGE_ENCRYPTION_KEY || "";
 
@@ -35,9 +37,9 @@ export default function CreateNewWallet() {
     | undefined
   >(undefined);
 
-  const [value, setValue] = useLocalStorage(walletKeypairKey, "");
-  const [_, setStoredPassword] = useSessionStorage(
-    "cygnus-wallet-password",
+  const { value, setValue } = useLocalStorage(walletKeypairKey, "");
+  const { setValue: setStoredPassword } = useSessionStorage(
+    sessionStoragePasswordKey,
     ""
   );
 

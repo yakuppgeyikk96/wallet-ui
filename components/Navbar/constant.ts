@@ -11,9 +11,4 @@ export const navbarItems: INavbarItem[] = [
     label: "Swap",
     href: "/swap",
   },
-  {
-    key: "3",
-    label: "History",
-    href: "/history",
-  },
 ];

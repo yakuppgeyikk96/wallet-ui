@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { navbarItems } from "./constant";
 import NavbarItem from "./NavbarItem";
+import AccountDropdown from "../AccountDropdown";
 
 export default function Navbar() {
   return (
@@ -17,7 +18,7 @@ export default function Navbar() {
             <NavbarItem key={key} label={label} href={href} />
           ))}
         </ul>
-        <div>Account Dropdown</div>
+        <AccountDropdown />
       </div>
     </nav>
   );

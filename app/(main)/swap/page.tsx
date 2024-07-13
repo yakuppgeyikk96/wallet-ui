@@ -1,3 +1,5 @@
+import SwapPage from "@/pages/SwapPage";
+
 export default function Swap() {
-  return <div>Swap</div>;
+  return <SwapPage />;
 }

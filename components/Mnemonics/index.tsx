@@ -14,7 +14,7 @@ export default function Mnemonics({ mnemonics }: { mnemonics: string }) {
       navigator.clipboard.writeText(mnemonics);
       setMnemonicsCopied(true);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 

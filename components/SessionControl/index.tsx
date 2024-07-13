@@ -15,8 +15,11 @@ export default function SessionControl({
     | "cygnus-wallet-keypair";
   const router = useRouter();
   const pathname = usePathname();
-  const [storedKey] = useLocalStorage(walletKeypairKey, "");
-  const [storedPassword] = useSessionStorage("cygnus-wallet-password", "");
+  const { value: storedKey } = useLocalStorage(walletKeypairKey, "");
+  const { value: storedPassword } = useSessionStorage(
+    "cygnus-wallet-password",
+    ""
+  );
 
   useEffect(() => {
     if (!storedKey && pathname !== "/signup") {

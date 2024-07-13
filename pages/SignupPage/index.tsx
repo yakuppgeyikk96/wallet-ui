@@ -1,4 +1,5 @@
 import CreateNewWallet from "@/components/CreateNewWallet";
+import ImportWallet from "@/components/ImportWallet";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
@@ -20,7 +21,7 @@ export default function SignupPage() {
         <CardContent className="flex flex-col gap-4 my-4">
           <CreateNewWallet />
           <strong className="self-center">or</strong>
-          <Button>Import an existing one</Button>
+          <ImportWallet />
         </CardContent>
       </Card>
     </main>
